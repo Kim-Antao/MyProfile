@@ -1,0 +1,8 @@
+@mixin default-flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@mixin default-grid{
+    display: grid;
+}
