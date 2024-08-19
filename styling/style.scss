@@ -1,0 +1,263 @@
+@import "./palette.scss";
+@import "./fonts.scss";
+
+body{
+    margin: 0%;
+    background-color: $primary-background-color;
+    color: $primary-font-color;
+}
+
+header, main{
+    padding: 30px;
+}
+
+.nav-bar{
+    display: flex;
+}
+
+.nav-brand{
+    font-family: $special-font;
+    font-weight: 400;
+    font-size: xx-large;
+    flex-grow: 3;
+}
+
+.secondary-color{
+    color: $secondary-font-color;
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    margin: 0px;
+}
+
+a{
+    color: $primary-font-color;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1px ;    
+}
+
+a:hover{
+    color: $secondary-font-color;
+}
+
+.introductory-content{
+    margin: 10px 10px 5rem 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.main-heading{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: $heading-font;
+   // font-family: $special-font;
+    font-weight: 200;
+    font-size: 7.5vw;
+    margin-bottom: 0;
+}
+
+.main-heading-underline{
+    width: 20%;
+    border: 2px solid $secondary-font-color;
+    margin-inline-start: 5%;
+}
+
+.half-page-display{
+    grid-row-start: 3;
+    font-size: large;
+    letter-spacing: 0.5px;
+}
+
+.section-header{
+    font-family: $special-font;
+    font-weight:500;
+    grid-area: heading;
+    font-size:xx-large;
+}
+
+#aboutSection{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas: 'heading heading picture'
+                         'para para picture'
+                         'para para picture';
+}
+
+.about-section-header{
+    grid-area: heading;
+}
+
+.about-section-content{
+    grid-area: para;
+    width: 90%;
+    font-size: large;
+    letter-spacing: 0.5px;
+}
+
+.about-section-image{
+    grid-area: picture;
+    width: 80%;
+}
+
+#skillsSection{
+    margin-top: 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 'heading para para para'
+                         'icons icons icons icons';
+}
+
+.skills-section-header{
+    grid-area: heading;
+}
+
+.skills-section-content{
+    grid-area: para;
+    font-size: large;
+    letter-spacing: 0.5px;
+}
+
+.skills-section-icons{
+    grid-area: icons;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.skills-icon-properties{
+    height: 4em;
+    width: 4em;
+    fill: $icon-color;
+    padding: 0 10px;
+    margin-bottom: 5%;
+}
+
+#portfolioSection{
+    margin-top: 8%;
+}
+
+.portfolio-section-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-card{
+    margin-top: 5%;
+}
+
+.portfolio-thumbnail{
+    width:35vw;
+    height:20vw;
+    background-color: $secondary-background-color;
+}
+
+.portfolio-card-content{
+    display: grid;
+    grid-template-columns: 55% 25% 20%;
+}
+
+.portfolio-card-header{
+    font-family: $special-font;
+    font-weight: 100;
+    font-size: xx-large;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.icon-container{
+    grid-column-start: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-background{
+    display: flex;
+    background-color: $secondary-background-color;
+    min-width: 2em;
+    height: 2em;
+    //text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    align-content: center;
+   
+}
+
+.portfolio-icon-properties{
+    width: 1em;
+    height: 1em;
+    fill: $primary-font-color ;
+}
+
+.programming-language-container{
+    margin-top: 5px;
+}
+
+.programming-language{
+    background-color: $secondary-background-color;
+    padding: 5px 15px;
+    margin: 2px;
+}
+
+#contactSection{
+  //  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+   // padding-bottom: ;
+   margin-bottom: 5%;
+}
+
+.contact-section-header{
+    font-family: $heading-font;
+  //  font-weight: lighter;
+    font-size: 7.5vw;
+ //   text-align: center;
+    margin-block-end: 0.4em;
+}
+
+.contact-btn{
+    border: 1px solid $primary-font-color;
+    padding: 2% 10%;
+    width: fit-content;
+    
+}
+
+.footer-section{
+    background-color: $secondary-background-color;
+}
+
+.footer-section{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons{
+    width: 1.5em;
+    height: 1.5em;
+    fill: $secondary-font-color;
+    opacity: .8;
+}
+
+.footer-icon-background{
+    background-color: $tertiary-background-color;
+    min-width: 3em;
+    height: 3em;
+    //text-align: center;
+   // justify-content: center;
+   // align-items: center;
+    border-radius: 50%;
+    align-content: center;
+    margin: 25px 15px;
+}
+
+.footer-icon-background:hover{
+    background-color: $primary-background-color;
+}
