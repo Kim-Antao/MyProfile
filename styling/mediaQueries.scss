@@ -6,26 +6,26 @@
     }
 }
 
-@mixin tablet{
-    @media only screen and (mid-width:($xs + 1px)) and (max-width:$sm) {
+@mixin medium-phone{
+    @media only screen and (min-width:($xs + 1px)) and (max-width:$sm) {
         @content;
     }
 }
 
-@mixin landscape-tablet{
-    @media only screen and (mid-width:($sm + 1px)) and (max-width:$md) {
+@mixin tablet{
+    @media only screen and (min-width:($sm + 1px)) and (max-width:$md) {
         @content;
     }
 }
 
 @mixin laptop{
-    @media only screen and (mid-width:($md + 1px)) and (max-width:$lg) {
+    @media only screen and (min-width:($md + 1px)) and (max-width:$lg) {
         @content;
     }
 }
 
-@mixin large-screen{
-    @media only screen and (mid-width:($lg + 1px)) and (max-width:$xl) {
+@mixin large-laptop{
+    @media only screen and (min-width:($lg + 1px)) and (max-width:$xl) {
         @content;
     }
 }

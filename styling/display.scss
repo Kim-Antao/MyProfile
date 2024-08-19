@@ -3,6 +3,6 @@
     flex-wrap: nowrap;
 }
 
-@mixin default-grid{
-    display: grid;
+@mixin default-padding{
+    padding: 0px 30px 30px 30px;
 }

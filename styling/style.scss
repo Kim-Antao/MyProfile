@@ -1,3 +1,5 @@
+@use "./display.scss";
+@use "./mediaQueries.scss";
 @import "./palette.scss";
 @import "./fonts.scss";
 
@@ -7,30 +9,120 @@ body{
     color: $primary-font-color;
 }
 
-header, main{
+.navigation{
+    @include display.default-flex;
+    box-sizing: border-box;
+    height: 80px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: $primary-background-color;
     padding: 30px;
-}
-
-.nav-bar{
-    display: flex;
-}
-
-.nav-brand{
-    font-family: $special-font;
-    font-weight: 400;
-    font-size: xx-large;
+    z-index: 2;
+    align-items: center;
     flex-grow: 3;
+   
+    &__brand{
+        font-family: $special-font;
+        font-weight: 400;
+        font-size: xx-large;
+
+        &--last-name{
+            color: $secondary-font-color;
+        }
+    }
+
+    &__items{
+        @include display.default-flex;
+        list-style: none;
+        margin: 0px;
+        align-items: center;
+        margin-left: auto;
+    
+        &--list{
+            padding: 20px;
+        }
+    }
+
+    &__toggle-button{
+        width: 2em;
+        height: 2em;
+        fill: $primary-font-color;
+        cursor: pointer;
+        display: none;
+    }
+
 }
 
-.secondary-color{
-    color: $secondary-font-color;
+#toggleBtn{
+    display: none;
 }
 
-.nav-items{
-    list-style: none;
-    display: flex;
-    margin: 0px;
+@include mediaQueries.phone{
+    .navigation{
+
+        &__toggle-button{
+            display: block;
+            margin-left: auto;
+        }
+
+        &__items{
+            position: fixed;
+            width: 100%;
+            height: 30vh;
+            background-color: $dropdown-background-color;
+            top: 80px;
+            left: 0;
+            right: -100%;
+            @include display.default-flex;
+            flex-direction: column;
+            padding: 0;
+            transition: all .5s;
+        }
+
+        &__brand{
+            font-size: x-large;
+        }
+    
+    }
+
 }
+
+@include mediaQueries.medium-phone{
+
+    .navigation{
+        &__items{
+
+            &--list{
+                padding: 0px;
+            }
+        }
+
+        &__brand{
+            font-size: x-large;
+        }
+    }
+}
+
+@include mediaQueries.tablet{
+    .navigation{
+        &__items{
+            &--list{
+                padding: 20px;
+            }
+        }
+
+        
+    }
+}
+
+
+input[type=checkbox]:checked ~ .navigation__items{
+   right: 0%;
+}
+
+
 
 a{
     color: $primary-font-color;
@@ -42,13 +134,18 @@ a{
 
 a:hover{
     color: $secondary-font-color;
+    transition: 0.7s;
 }
 
 .introductory-content{
+    @include display.default-padding;
+    position: relative;
+    top: 80px;
     margin: 10px 10px 5rem 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 
 .main-heading{
     grid-column-start: 1;
