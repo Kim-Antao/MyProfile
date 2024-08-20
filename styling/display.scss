@@ -1,8 +1,21 @@
+@import "./fonts.scss";
+
 @mixin default-flex{
     display: flex;
     flex-wrap: nowrap;
 }
 
+@mixin wrap-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 @mixin default-padding{
-    padding: 0px 30px 30px 30px;
+    padding: 30px 30px 30px 30px;
+}
+
+@mixin default-sub-header{
+    font-family: $special-font;
+    font-weight:300;
+    font-size: xx-large;
 }
