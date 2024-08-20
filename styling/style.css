@@ -364,7 +364,7 @@ input[type=checkbox]:checked ~ .navigation__items {
   .skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "heading para para para" " horizontalLine horizontalLine horizontalLine horizontalLine" " icons icons icons icons";
+    grid-template-areas: "heading para para para" "horizontalLine horizontalLine horizontalLine horizontalLine" "icons icons icons icons";
   }
   .skills__header {
     grid-area: heading;

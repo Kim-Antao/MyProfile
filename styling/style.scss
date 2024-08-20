@@ -177,6 +177,7 @@ input[type=checkbox]:checked ~ .navigation__items{
 .about{
     @include display.default-padding;
     padding-top: 0%;
+
     &__header{
         @include display.default-sub-header;
         margin-block-end: 0;
@@ -235,6 +236,7 @@ input[type=checkbox]:checked ~ .navigation__items{
         width: 2em;
         fill: $icon-color;
     }
+
     &__name{
         font-size: xx-small;
     }
@@ -258,7 +260,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         padding: 7% 25%;
         width: fit-content;
         transition: all 0.5s;
-
     }
 
     &__btn:hover{
@@ -268,8 +269,7 @@ input[type=checkbox]:checked ~ .navigation__items{
 }
 
 .footer{
-   // @include display.default-padding;
-   padding: 10px;
+    padding: 10px;
     text-align: center;
     background-color: $secondary-background-color;
     margin-top: 30px;;
@@ -279,7 +279,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         margin: 15px;
     }
 }
-
 
 .footer-icons{
     width: 1.5em;
@@ -326,7 +325,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         &__brand{
             font-size: x-large;
         }
-    
     }
 
     .introductory-content{
@@ -340,10 +338,10 @@ input[type=checkbox]:checked ~ .navigation__items{
         &__para{
             font-size: medium;
         }
-
     }
 
     .about{
+
         &__content{
             font-size: medium;
         }
@@ -358,12 +356,12 @@ input[type=checkbox]:checked ~ .navigation__items{
     }
 
     .footer{
-         margin-top: 30px;;
-     
-         &__icon-background{
-             margin: 5px;
-         }
-     }
+        margin-top: 30px;;
+    
+        &__icon-background{
+            margin: 5px;
+        }
+    }
     
     .footer-icons{
         width: 1em;
@@ -374,13 +372,12 @@ input[type=checkbox]:checked ~ .navigation__items{
         background-color: $tertiary-background-color;
         border-radius: 50%;
         transition: 0.5s;
-    }    
-    
+    }     
 }
 
 @include mediaQueries.medium-phone{
-
     .navigation{
+
         &__items{
 
             &--list{
@@ -395,6 +392,7 @@ input[type=checkbox]:checked ~ .navigation__items{
     }
 
     .portfolio{
+
         &__content{
             @include display.wrap-flex;
             justify-content: space-between;
@@ -405,9 +403,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         width:40vw;
         height: 20vw;
     }
-
-    
-    
 }
 
 @include mediaQueries.medium-phone-and-above{
@@ -415,8 +410,8 @@ input[type=checkbox]:checked ~ .navigation__items{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 'heading para para para'
-                            ' horizontalLine horizontalLine horizontalLine horizontalLine'
-                            ' icons icons icons icons';
+                             'horizontalLine horizontalLine horizontalLine horizontalLine'
+                             'icons icons icons icons';
 
         &__header{
             grid-area: heading;
@@ -458,6 +453,7 @@ input[type=checkbox]:checked ~ .navigation__items{
     
     .contact{
         padding-top: 0%;
+
         &__header{
             font-size: 7.5vw;
         }
@@ -486,15 +482,12 @@ input[type=checkbox]:checked ~ .navigation__items{
 
         &__image{
             grid-area: picture;
-           
         }
 
         &__content{
             grid-area: para;
             padding-right: 5%;
-
         }
-    
     }
 }
 
@@ -533,9 +526,7 @@ input[type=checkbox]:checked ~ .navigation__items{
             margin-inline-start: 2%;
             width: 5%;
         }
-    }
-
-    
+    }    
 }
 
 @include mediaQueries.laptop{
@@ -544,7 +535,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         padding-left: 20%;
         padding-right: 20%;
     }
-
     
     .skills-icon-container{
         margin-top: 2%;
@@ -558,8 +548,5 @@ input[type=checkbox]:checked ~ .navigation__items{
         &__name{
             font-size:medium;
         }
-    }
-
-    
+    }    
 }
-
