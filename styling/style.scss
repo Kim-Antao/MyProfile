@@ -40,10 +40,12 @@ body{
         align-items: center;
         margin-left: auto;
     
-        &--list{
-            padding: 20px;
-            font-size: 18px;
-        }
+        
+    }
+
+    &__items-list{
+        padding: 20px;
+        font-size: 18px;
     }
 
     &__toggle-button{
@@ -260,6 +262,11 @@ input[type=checkbox]:checked ~ .navigation__items{
         padding: 7% 25%;
         width: fit-content;
         transition: all 0.5s;
+
+        &__white_text{
+            color: #fff;
+            text-decoration: none;
+        }
     }
 
     &__btn:hover{
@@ -316,10 +323,11 @@ input[type=checkbox]:checked ~ .navigation__items{
             flex-direction: column;
             padding: 0;
             transition: all .5s;
-            
-            &--list{
-                font-size: 15px;
-            }
+           
+        }
+
+        &__items-list{
+            font-size: 15px;
         }
 
         &__brand{
@@ -378,12 +386,10 @@ input[type=checkbox]:checked ~ .navigation__items{
 @include mediaQueries.medium-phone{
     .navigation{
 
-        &__items{
+        &__items-list{
 
-            &--list{
                 padding: 0px;
                 font-size: 15px;
-            }
         }
 
         &__brand{
@@ -493,10 +499,8 @@ input[type=checkbox]:checked ~ .navigation__items{
 
 @include mediaQueries.tablet{
     .navigation{
-        &__items{
-            &--list{
+        &__items-list{
                 padding: 10px;
-            }
         }
         
     }
