@@ -120,7 +120,24 @@ input[type=checkbox]:checked ~ .navigation__items {
 
 .portfolio-card-thumbnail {
   height: 40vw;
-  background-color: #4f4f4f;
+  background-color: #161616;
+  background-position: center;
+  background-position-y: center;
+}
+.portfolio-card-thumbnail--project1 {
+  background-image: url("../assets/project1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.portfolio-card-thumbnail--project2 {
+  background-image: url("../assets/project2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.portfolio-card-thumbnail--project3 {
+  background-image: url("../assets/project3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .portfolio-card-content {
@@ -131,8 +148,8 @@ input[type=checkbox]:checked ~ .navigation__items {
   font-family: "Alegreya SC";
   font-weight: lighter;
   font-size: x-large;
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 .portfolio-card-content__icon-container {
   grid-column-start: 2;
@@ -151,6 +168,11 @@ input[type=checkbox]:checked ~ .navigation__items {
   align-items: center;
   border-radius: 50%;
   margin-left: 10px;
+  transition: background-color 1.5s;
+}
+
+.icon-background:hover {
+  background-color: #161616;
 }
 
 .portfolio-icon-properties {
