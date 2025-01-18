@@ -11,6 +11,8 @@ body {
 .navigation {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
+  padding: 30px 40px 30px 40px;
   box-sizing: border-box;
   height: 80px;
   width: 100vw;
@@ -18,9 +20,7 @@ body {
   top: 0px;
   left: 0px;
   background-color: #333333;
-  padding: 30px 40px 30px 40px;
   z-index: 2;
-  align-items: center;
   flex-grow: 3;
 }
 .navigation__brand {
@@ -34,9 +34,9 @@ body {
 .navigation__items {
   display: flex;
   flex-wrap: nowrap;
+  align-items: center;
   list-style: none;
   margin: 0px;
-  align-items: center;
   margin-left: auto;
 }
 .navigation__items-list {
@@ -79,7 +79,6 @@ input[type=checkbox]:checked ~ .navigation__items {
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 30px 40px 30px 40px;
 }
 .introductory-content__heading {
   grid-column-start: 1;
@@ -109,7 +108,7 @@ input[type=checkbox]:checked ~ .navigation__items {
   font-weight: 300;
   font-size: xx-large;
 }
-.portfolio__header--icon {
+.portfolio__header-icon {
   width: 0.75em;
   height: 0.75em;
 }
@@ -117,41 +116,35 @@ input[type=checkbox]:checked ~ .navigation__items {
 .portfolio-card {
   margin-bottom: 35px;
 }
-
-.portfolio-card-thumbnail {
+.portfolio-card__thumbnail {
   height: 40vw;
   background-color: #161616;
   background-position: center;
   background-position-y: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.portfolio-card-thumbnail--project1 {
+.portfolio-card__thumbnail--project1 {
   background-image: url("../assets/project1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-.portfolio-card-thumbnail--project2 {
+.portfolio-card__thumbnail--project2 {
   background-image: url("../assets/project2.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-.portfolio-card-thumbnail--project3 {
+.portfolio-card__thumbnail--project3 {
   background-image: url("../assets/project3.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-
-.portfolio-card-content {
+.portfolio-card__content {
   display: grid;
   grid-template-columns: 65% 35%;
 }
-.portfolio-card-content__header {
+.portfolio-card__content__header {
   font-family: "Alegreya SC";
   font-weight: lighter;
   font-size: x-large;
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
-.portfolio-card-content__icon-container {
+.portfolio-card__content__icon-container {
   grid-column-start: 2;
   display: flex;
   align-items: center;
@@ -159,19 +152,19 @@ input[type=checkbox]:checked ~ .navigation__items {
   margin-left: auto;
 }
 
-.icon-background {
+.portfolio-icon {
   display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   background-color: #4f4f4f;
   min-width: 2em;
   height: 2em;
   justify-content: center;
-  align-items: center;
   border-radius: 50%;
   margin-left: 10px;
-  transition: background-color 1.5s;
+  transition: background-color 0.5s;
 }
-
-.icon-background:hover {
+.portfolio-icon:hover {
   background-color: #161616;
 }
 
@@ -325,6 +318,7 @@ input[type=checkbox]:checked ~ .navigation__items {
     right: -100%;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
     flex-direction: column;
     padding: 0;
     transition: all 0.5s;
@@ -385,7 +379,7 @@ input[type=checkbox]:checked ~ .navigation__items {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .portfolio-card-thumbnail {
+  .portfolio-card__thumbnail {
     width: 40vw;
     height: 20vw;
   }
@@ -464,7 +458,7 @@ input[type=checkbox]:checked ~ .navigation__items {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .portfolio-card-thumbnail {
+  .portfolio-card__thumbnail {
     width: 30vw;
     height: 20vw;
   }

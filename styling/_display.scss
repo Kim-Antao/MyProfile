@@ -4,6 +4,7 @@
 @mixin default-flex{
     display: flex;
     flex-wrap:nowrap;
+    align-items: center;
 }
 
 @mixin wrap-flex{

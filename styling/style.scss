@@ -11,6 +11,7 @@ body{
 
 .navigation{
     @include display.default-flex;
+    @include display.default-padding;
     box-sizing: border-box;
     height: 80px;
     width: 100vw;
@@ -18,9 +19,7 @@ body{
     top: 0px;
     left: 0px;
     background-color: $primary-background-color;
-    @include display.default-padding;
     z-index: 2;
-    align-items: center;
     flex-grow: 3;
    
     &__brand{
@@ -37,10 +36,8 @@ body{
         @include display.default-flex;
         list-style: none;
         margin: 0px;
-        align-items: center;
         margin-left: auto;
-    
-        
+      
     }
 
     &__items-list{
@@ -86,8 +83,7 @@ input[type=checkbox]:checked ~ .navigation__items{
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    @include display.default-padding;
-
+   
     &__heading{
         grid-column-start: 1;
         grid-column-end: 3;
@@ -115,91 +111,75 @@ input[type=checkbox]:checked ~ .navigation__items{
     
     &__header{
         @include display.default-sub-header;
-
-        &--icon{
-            width:0.75em;
-            height:0.75em;
-        }
+    }
+    
+    &__header-icon{
+        width:0.75em;
+        height:0.75em;
     }
 }
 
 .portfolio-card{
     margin-bottom: 35px;
-}
 
-.portfolio-card-thumbnail{
+    &__thumbnail{
         height:40vw;
         background-color: $portfolio-thumbnail-color;
-        // background-size: contain;
-        // background-repeat: no-repeat;
-        // margin-bottom: 0.5em;
         background-position: center;
         background-position-y: center;
-
-
-
-        &--project1{
-            background-image: url("../assets/project1.png");
-            background-size: contain;
+        background-size: contain;
         background-repeat: no-repeat;
+        
+        &--project1{
+            background-image: url("../assets/project1.png");      
         }
 
         &--project2{
             background-image: url("../assets/project2.png");
-            background-size: contain;
-        background-repeat: no-repeat;
-           
         }
 
         &--project3{
             background-image: url("../assets/project3.png");
-            background-size: contain;
-        background-repeat: no-repeat;
-
         }
-}
-
-.portfolio-card-content{
-    display: grid;
-    grid-template-columns: 65% 35%;
-   
-    &__header{
-        font-family: $special-font;
-        font-weight: lighter;
-        font-size: x-large;
-        margin-block-start: 0.5em;
-        margin-block-end: 0.5em;
-        // margin-bottom: 20px;
     }
 
-    &__icon-container{
-        grid-column-start: 2;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin-left: auto;
-    }    
+    &__content{
+        display: grid;
+        grid-template-columns: 65% 35%;
+
+        &__header{
+            font-family: $special-font;
+            font-weight: lighter;
+            font-size: x-large;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+        }
+
+        &__icon-container{
+            grid-column-start: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: auto;
+        } 
+    }
 }
 
-.icon-background{
-    display: flex;
+.portfolio-icon{
+    @include display.default-flex;
     background-color: $portfolio-icon-color;
     min-width: 2em;
     height: 2em;
     justify-content: center;
-    align-items: center;
     border-radius: 50%;
     margin-left: 10px;
-    transition: background-color 1.5s;
-}
+    transition: background-color 0.5s;
 
-.icon-background:hover{
-    background-color: $portfolio-thumbnail-color;
-    
+    &:hover{
+        background-color: $portfolio-thumbnail-color;
+    }
+
 }
-// .icon-background > a:hover{
-//     background-color: red;
-// }
 
 .portfolio-icon-properties{
     width: 1em;
@@ -207,15 +187,10 @@ input[type=checkbox]:checked ~ .navigation__items{
     fill: $primary-font-color ;
 }
 
-// .portfolio-icon-properties:hover{
-//     fill: $secondary-font-color;
-// }
 .programming-language{
-
     background-color: $portfolio-icon-color;
     padding: 5px 15px;
     font-size:x-small;
-    // margin-top: 100px;
 }
 
 .about{
@@ -310,7 +285,6 @@ input[type=checkbox]:checked ~ .navigation__items{
             cursor: pointer;
             background-color: $tertiary-background-color;
             box-shadow: 3px 3px black inset, 3px 3px white;
-
         }
 
         &:hover{
@@ -323,9 +297,6 @@ input[type=checkbox]:checked ~ .navigation__items{
         text-decoration: none;
        
     }
-
-    
-
     
 }
 
@@ -459,7 +430,7 @@ input[type=checkbox]:checked ~ .navigation__items{
         }
     }
 
-    .portfolio-card-thumbnail{
+    .portfolio-card__thumbnail{
         width:40vw;
         height: 20vw;
     }
@@ -567,9 +538,12 @@ input[type=checkbox]:checked ~ .navigation__items{
         }
     }
 
-    .portfolio-card-thumbnail{
-        width:30vw;
-        height: 20vw;
+    .portfolio-card{
+        &__thumbnail{
+            width:30vw;
+            height: 20vw;
+        }
+      
     }
 
     .programming-language{
@@ -577,7 +551,6 @@ input[type=checkbox]:checked ~ .navigation__items{
     }
 
     .skills{
-
         &__heading-underline{
             margin-inline-start: 2%;
             width: 5%;
