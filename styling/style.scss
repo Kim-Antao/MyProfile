@@ -300,21 +300,33 @@ input[type=checkbox]:checked ~ .navigation__items{
     }
 
     &__btn{
-        border: 1px solid $primary-font-color;
-        padding: 7% 25%;
+        padding: 2em 4em;
         width: fit-content;
-        transition: all 0.5s;
+        transition: all 1s;
+        box-shadow: 3px 3px white inset, 3px 3px black;
+        
 
-        &__white_text{
-            color: #fff;
-            text-decoration: none;
+        &:active{
+            cursor: pointer;
+            background-color: $tertiary-background-color;
+            box-shadow: 3px 3px black inset, 3px 3px white;
+
+        }
+
+        &:hover{
+            background-color: $tertiary-background-color;
         }
     }
 
-    &__btn:hover{
-        cursor: pointer;
-        box-shadow: 0px 0px 8px 0 $primary-font-color;
+    &__btn-title{
+        color: white;
+        text-decoration: none;
+       
     }
+
+    
+
+    
 }
 
 .footer{
@@ -506,9 +518,7 @@ input[type=checkbox]:checked ~ .navigation__items{
             font-size: 7.5vw;
         }
 
-        &__btn{
-            padding: 2% 8%;
-        }
+        
     }
 
     .about{

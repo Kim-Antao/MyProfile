@@ -265,18 +265,22 @@ input[type=checkbox]:checked ~ .navigation__items {
   font-size: 15vw;
 }
 .contact__btn {
-  border: 1px solid #f6f6f6;
-  padding: 7% 25%;
+  padding: 2em 4em;
   width: fit-content;
-  transition: all 0.5s;
+  transition: all 1s;
+  box-shadow: 3px 3px white inset, 3px 3px black;
 }
-.contact__btn__white_text {
-  color: #fff;
-  text-decoration: none;
+.contact__btn:active {
+  cursor: pointer;
+  background-color: #5b5a5a;
+  box-shadow: 3px 3px black inset, 3px 3px white;
 }
 .contact__btn:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 8px 0 #f6f6f6;
+  background-color: #5b5a5a;
+}
+.contact__btn-title {
+  color: white;
+  text-decoration: none;
 }
 
 .footer {
@@ -427,9 +431,6 @@ input[type=checkbox]:checked ~ .navigation__items {
   }
   .contact__header {
     font-size: 7.5vw;
-  }
-  .contact__btn {
-    padding: 2% 8%;
   }
   .about {
     padding-left: 10%;
